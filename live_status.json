@@ -1,0 +1,45 @@
+{
+  "facility": "Bank Branch",
+  "counter_data": [
+    {
+      "counter_id": 1,
+      "people": 1,
+      "wait_time": 1
+    },
+    {
+      "counter_id": 2,
+      "people": 15,
+      "wait_time": 16
+    },
+    {
+      "counter_id": 3,
+      "people": 20,
+      "wait_time": 22
+    },
+    {
+      "counter_id": 4,
+      "people": 24,
+      "wait_time": 27
+    }
+  ],
+  "result": {
+    "total_people": 60,
+    "average_wait_time": 16.5,
+    "busiest_counter": 4,
+    "least_busy_counter": 1,
+    "best_counter_for_new_customer": 1,
+    "utilization_pct": 125.0,
+    "warnings": [
+      "\ud83d\udd34 Counter 2 OVERLOADED: 15 people (3 excess). Wait: 16 min.",
+      "\ud83d\udd34 Counter 3 OVERLOADED: 20 people (8 excess). Wait: 22 min.",
+      "\ud83d\udd34 Counter 4 OVERLOADED: 24 people (12 excess). Wait: 27 min."
+    ],
+    "recommendations": [
+      "\ud83d\udd04 REDIRECT 11 people from Counter 4 \u2192 Counter 1. (Gap: 23 people)",
+      "\ud83c\udd95 OPEN 1 NEW COUNTER(S)! Current: 4 counters handling 60 people (capacity: 48).",
+      "\ud83d\udc65 STAFF SHIFT: Move 1 staff from Counter 1 (idle, 1 people) to Counter 3 (overloaded)."
+    ],
+    "status": "CRITICAL"
+  },
+  "timestamp": "11:14:19 PM"
+}
